@@ -4,12 +4,9 @@ where
 
 import qualified Data.ByteString as B
 import qualified Data.Map.Strict as Map
-
 import Data.Word
 
-
-countChars :: B.ByteString -> Map.Map Word8 Int
-countChars = B.foldr (\k -> Map.insertWith (+) k 1) Map.empty
+import CharCount
 
 
 removeChar :: Word8 -> Map.Map Word8 Int -> Maybe (Map.Map Word8 Int)
